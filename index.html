@@ -15,7 +15,7 @@
       <header class="">
         <!-- Banner Section -->
           <!-- container -->
-          <div class="flex flex-col lg:flex-row items-center justify-center lg:gap-10 p-5  lg:p-20 bg-pink-100">
+          <div class="flex flex-col lg:flex-row items-center justify-center lg:gap-10 p-5 lg:ml-20  lg:p-20 bg-pink-100">
             <div class="text-center space-y-9  p-6">
               <h4 class="lg:text-3xl text-xl font-semibold">--- SALE FEVER ---</h4>
               <h1 class="lg:text-5xl text-3xl font-bold ">Purchase TK 200 or <br> above & get <span class="text-pink-600">20% off</span></h1>
@@ -184,7 +184,23 @@
                         <h4 class="font-bold text-xl">Total Price : <span class="font-normal">257</span> TK</h4>
                         <h4 class="font-bold text-xl">Discount : <span class="font-normal">53.07</span> TK</h4>
                         <h4 class="font-bold text-xl">Total : <span class="font-normal">254.03</span> TK</h4>
-                        <button class="btn bg-pink-400 text-white px-10 hover:bg-yellow-300 hover:text-black">Make Purchase</button>
+                       
+                        <!-- Open the modal using ID.showModal() method -->
+                        <button class="btn bg-pink-400 rounded-2xl text-white text-md px-6 hover:bg-yellow-300 hover:text-black" onclick="my_modal_5.showModal()">Make Purchase</button>
+                        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                        <div class="modal-box text-center">
+                            <img src="images/congo.png" alt="" class="mx-auto">
+
+                            <h3 class="font-bold text-xl">Congratulations!</h3>
+                            <p class="py-4 text-lg">Your Product is Purchased</p>
+                            <div class="modal-action flex justify-center">
+                            <form method="dialog">
+                                <!-- if there is a button in form, it will close the modal -->
+                                <button class="items-center text-center btn bg-pink-400 rounded-2xl text-white text-md px-6 hover:bg-yellow-300 hover:text-black">Go Home</button>
+                            </form>
+                            </div>
+                        </div>
+                        </dialog>
 
                     </div>
                 <!-- Div for Coupon Dynamic and cost section End -->
