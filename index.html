@@ -20,7 +20,7 @@
               <h4 class="lg:text-3xl text-xl font-semibold">--- SALE FEVER ---</h4>
               <h1 class="lg:text-5xl text-3xl font-bold ">Purchase TK 200 or <br> above & get <span class="text-pink-600">20% off</span></h1>
               <h4 class="lg:inline lg:text-2xl text-xl font-bold lg:mr-6">Use Promo Code</h4>
-              <button class="btn bg-pink-400 text-white lg:px-10 text-xl hover:bg-yellow-300 hover:text-black">SELL200</button>
+              <button onclick="couponActivator()" id="coupon-btn" class="btn bg-pink-400 text-white lg:px-10 text-xl hover:bg-yellow-300 hover:text-black" >SELL200</button>
             </div>
 
             <div class=" p-6">
@@ -41,7 +41,7 @@
                         <!-- 3 cards div -->
                         <!-- card 1 -->
                         <div class="flex flex-col lg:flex-row gap-10">
-                            <div class="card  bg-base-100 shadow-xl">
+                            <div onclick="shoppingSelection('product1-price','total-price')" class="card  bg-base-100 shadow-xl">
                                 <figure class="px-10 pt-10">
                                   <img src="images/prod1.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
@@ -54,13 +54,13 @@
                                     <span class="text-gray-300">&#9733;</span>
                                     <span class="text-gray-300">&#9733;</span>
                                 </div>
-                                  <p><span>39.00</span> Taka</p> 
+                                  <p><span id="product1-price">39.00</span> Taka</p> 
                                 </div>
                               </div>
                         
                         <!-- card 2 -->
                         
-                            <div class="card bg-base-100 shadow-xl">
+                            <div onclick="shoppingSelection('product2-price','total-price')" class="card bg-base-100 shadow-xl">
                                 <figure class="px-10 pt-10">
                                   <img src="images/prod2.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
@@ -73,13 +73,13 @@
                                     <span class="text-gray-300">&#9733;</span>
                                     <span class="text-gray-300">&#9733;</span>
                                 </div>
-                                  <p><span>25.00</span> Taka</p> 
+                                  <p><span id="product2-price">25.00</span> Taka</p> 
                                 </div>
                               </div>
                         
                         <!-- card 3 -->
                         
-                            <div class="card bg-base-100 shadow-xl">
+                            <div onclick="shoppingSelection('product3-price','total-price')" class="card bg-base-100 shadow-xl">
                                 <figure class="px-10 pt-10">
                                   <img src="images/prod3.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
@@ -92,7 +92,7 @@
                                     <span class="text-yellow-400">&#9733;</span>
                                     <span class="text-gray-300">&#9733;</span>
                                 </div>
-                                  <p><span>49.00</span> Taka</p> 
+                                  <p><span id="product3-price">49.00</span> Taka</p> 
                                 </div>
                               </div>
                         </div>
@@ -101,7 +101,7 @@
                         <h1 class="mt-10 lg:text-4xl text-2xl font-bold mb-10">Sportsware</h1>
                         <!-- 3 cards div -->
                         <div class="flex flex-col lg:flex-row gap-10">
-                            <div class="card bg-base-100 shadow-xl">
+                            <div onclick="shoppingSelection('product4-price','total-price')" class="card bg-base-100 shadow-xl">
                                 <figure class="px-10 pt-10">
                                   <img src="images/prod4.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
@@ -114,13 +114,13 @@
                                     <span class="text-gray-300">&#9733;</span>
                                     <span class="text-gray-300">&#9733;</span>
                                 </div>
-                                  <p><span>49.00</span> Taka</p> 
+                                  <p><span id="product4-price">49.00</span> Taka</p> 
                                 </div>
                               </div>
                         
                         <!-- card 2 -->
                         
-                            <div class="card bg-base-100 shadow-xl">
+                            <div onclick="shoppingSelection('product5-price','total-price')" class="card bg-base-100 shadow-xl">
                                 <figure class="px-10 pt-10">
                                   <img src="images/prod5.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
@@ -133,13 +133,13 @@
                                     <span class="text-yellow-400">&#9733;</span>
                                     <span class="text-gray-300">&#9733;</span>
                                 </div>
-                                  <p><span>69.00</span> Taka</p> 
+                                  <p><span id="product5-price">69.00</span> Taka</p> 
                                 </div>
                               </div>
                         
                         <!-- card 3 -->
                         
-                            <div class="card bg-base-100 shadow-xl">
+                            <div onclick="shoppingSelection('product6-price','total-price')" class="card bg-base-100 shadow-xl">
                                 <figure class="px-10 pt-10">
                                   <img src="images/prod6.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
@@ -152,7 +152,7 @@
                                     <span class="text-gray-300">&#9733;</span>
                                     <span class="text-gray-300">&#9733;</span>
                                 </div>
-                                  <p><span>159.00</span> Taka</p> 
+                                  <p><span id="product6-price">159.07</span> Taka</p> 
                                 </div>
                               </div>
                         </div>
@@ -167,8 +167,8 @@
                     <!-- Coupon -->
                     <div class="space-y-3  p-4 bg-pink-200 rounded-2xl">
                         <h1 class="text-2xl font-semibold">Have Coupon?</h1>
-                        <input type="text" name="" id="" class="inline border border-pink-500 py-2 px-4 rounded-2xl">
-                        <button class="btn bg-pink-400 rounded-2xl text-white text-md px-6 hover:bg-yellow-300 hover:text-black" >Apply Now</button>
+                        <input type="text" name="" id="coupon-input" class="inline border border-pink-500 py-2 px-4 rounded-2xl">
+                        <button id="apply-btn" class="btn bg-pink-400 rounded-2xl text-white text-md px-6 hover:bg-yellow-300 hover:text-black" disabled >Apply Now</button>
                     </div>
                     <!-- Dynamic section -->
                     <div class=" p-4 bg-pink-200 rounded-2xl">
@@ -181,12 +181,12 @@
                     </div>
                     <!-- Price and purchase Calculator -->
                     <div class="space-y-3  p-4 bg-pink-200 rounded-2xl">
-                        <h4 class="font-bold text-xl">Total Price : <span class="font-normal">257</span> TK</h4>
-                        <h4 class="font-bold text-xl">Discount : <span class="font-normal">53.07</span> TK</h4>
-                        <h4 class="font-bold text-xl">Total : <span class="font-normal">254.03</span> TK</h4>
+                        <h4 class="font-bold text-xl">Total Price : <span class="font-normal" id="total-price">00</span> TK</h4>
+                        <h4 class="font-bold text-xl">Discount : <span class="font-normal" id="discount-amount">00</span> TK</h4>
+                        <h4 class="font-bold text-xl">Total : <span class="font-normal" id="discounted-price">00</span> TK</h4>
                        
                         <!-- Open the modal using ID.showModal() method -->
-                        <button class="btn bg-pink-400 rounded-2xl text-white text-md px-6 hover:bg-yellow-300 hover:text-black" onclick="my_modal_5.showModal()">Make Purchase</button>
+                        <button id="purchase-btn" class="btn bg-pink-400 rounded-2xl text-white text-md px-6 hover:bg-yellow-300 hover:text-black" onclick="my_modal_5.showModal()" disabled>Make Purchase</button>
                         <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                         <div class="modal-box text-center">
                             <img src="images/congo.png" alt="" class="mx-auto">
@@ -213,6 +213,6 @@
 
       </main>
         
-    
+    <script src="JS/summersale.js"></script>
 </body>
 </html>
