@@ -29,6 +29,7 @@ function shoppingSelection(priceID,totalPriceID)
     } else {
         couponButton.setAttribute('disabled', 'disabled');
     }
+    
 }
  const upTotalPrice = updatedTotalPrice;
 function couponActivator() {
@@ -55,15 +56,6 @@ function couponActivator() {
         applyButton.setAttribute('disabled', 'disabled');
     }
 }
-function applyDiscount(discountID)
-{
-    const discountedPrice = updatedTotalPrice * 0.2;
-    const discountAmount = document.getElementById("discountID");
-    const initialDiscountAmount = discountAmount.innerText;
-    const initialDiscount = parseFloat(initialDiscountAmount);
-    const updatedDiscountedPrice = initialDiscount + discountedPrice;
-    discountAmount.innerText = updatedDiscountedPrice;
 
-    const finalTotalPrice = updatedTotalPrice - updatedDiscountedPrice;
-    mainTotal.innerText = finalTotalPrice;
-}
+
+
