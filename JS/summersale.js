@@ -14,6 +14,8 @@ function shoppingSelection(priceID,totalPriceID)
     const updatedTotalPrice = startingTotalPrice + initialPriceFinal;
 
     initialTotalPrice.innerText = updatedTotalPrice;
+    const mainTotal = document.getElementById("discounted-price");
+    mainTotal.innerText = updatedTotalPrice;
 
     const purchaseButton = document.getElementById("purchase-btn");
     if (updatedTotalPrice > 0) {
@@ -28,12 +30,15 @@ function shoppingSelection(priceID,totalPriceID)
         couponButton.setAttribute('disabled', 'disabled');
     }
 }
+ const upTotalPrice = updatedTotalPrice;
 function couponActivator() {
     const couponText = document.getElementById("coupon-btn").innerText.trim();
     const applyCoupon = document.getElementById("coupon-input");
-    const applyButton = document.getElementById("apply-btn"); 
+    const applyButton = document.getElementById("apply-btn");
+    
     // Set the value of the input field to the coupon code
     applyCoupon.value = couponText;
+
     // Add an event listener to detect changes in the input field
     applyCoupon.addEventListener('input', function() {
         const enteredCoupon = applyCoupon.value.trim();
@@ -50,4 +55,15 @@ function couponActivator() {
         applyButton.setAttribute('disabled', 'disabled');
     }
 }
+function applyDiscount(discountID)
+{
+    const discountedPrice = updatedTotalPrice * 0.2;
+    const discountAmount = document.getElementById("discountID");
+    const initialDiscountAmount = discountAmount.innerText;
+    const initialDiscount = parseFloat(initialDiscountAmount);
+    const updatedDiscountedPrice = initialDiscount + discountedPrice;
+    discountAmount.innerText = updatedDiscountedPrice;
 
+    const finalTotalPrice = updatedTotalPrice - updatedDiscountedPrice;
+    mainTotal.innerText = finalTotalPrice;
+}
